@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo Form cơ bản</title>
+</head>
+
+<style>
+  owf{
+    font-family: "Microsoft YaHei";
+  }
+</style>
+<body>
+
+<p>Thực hành tạo Form cơ bản</p>
+
+<form method="get" action="index.html" class="owf">
+  <h2>Order Form </h2>
+       <p>What would you like to buy?</p>
+
+          <select style="background-color: rgba(96,96,96,0.33)">
+            <option>A</option>
+            <option>B (+ 02$)</option>
+            <option>C (+ 0,7$)</option>
+
+          </select>
+       <p>How many would you like to order?</p>
+
+          <input type="radio" name="rd" > 1 - $10<br>
+          <input type="radio" name="rd"> 2 - $50<br>
+          <input type="radio" name="rd"> 3 - $88<br>
+
+  <p>Name<span style="font-family: Arial; color: #0033ff" >*</span></p>
+
+  <input type="text" placeholder="FirstName" name="fisname" size="16">
+  <input type="text" placeholder="LastName" name="lsname" size="16">
+
+  <p>Email</p>
+
+  <input type="text" placeholder="nhập @gmail" name="gmail">
+
+  <p>Phone Numer</p>
+  <input type="number" name="phone_1" size="7">-
+  <input type="number" name="phone_2" size="7">-
+  <input type="number" name="phone_3" size="7">-
+
+  <p><input type="button" name="submit" value="Submit" style="background-color: aquamarine"></p>
+
+</form>
+
+</body>
+</html>
