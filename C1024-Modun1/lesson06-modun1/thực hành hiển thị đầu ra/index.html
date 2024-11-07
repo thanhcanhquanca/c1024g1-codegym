@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành hiển thị đầu ra</title>
+</head>
+<body>
+
+<p>Thực hành hiển thị đầu ra</p>
+
+ <select id="djss" onchange="nala()" >
+   <option value="Ndi"> HN</option>
+   <option value="Nd">VN</option>
+   <option value="LDk" >DH</option>
+   <option value="UU"> UY</option>
+ </select>
+
+
+<select id="uiui"  >
+    <option value="Ndi"> HN</option>
+    <option value="Nd">VN</option>
+    <option value="LDk" >DH</option>
+    <option value="UU"> UY</option>
+</select>
+
+<p onclick="alert('Ta Thu Than . Ten Ho Kinh Ma long')">Than long chien ma Nhup</p>
+
+<p id="dup">dup dup vao day nao</p>
+
+
+ <p id="meo" onmouseover="kabi()" onmouseout="bija()">Meo con</p>
+
+<p id="halo" onclick="JKd()">Halo dup</p>
+
+<script>
+    function JKd(){
+        var _na = document.getElementById("halo").value;
+        prompt(_na);
+    }
+</script>
+
+<script>
+    var _lad = document.getElementById("dup");
+    _lad.addEventListener("click" ,cdlik);
+    function cdlik(){
+        var _k = document.getElementById("dup").value;
+        alert(_k);
+    }
+</script>
+
+<script>
+    var _la = document.getElementById("uiui");
+    _la.addEventListener("change",nalad);
+    function nalad(){
+        var _jm = document.getElementById("uiui").value;
+        console.log(_jm);
+    }
+</script>
+
+<script>
+    function nala(){
+        var _nak = document.getElementById("djss").value;
+        alert(_nak);
+
+    }
+
+</script>
+
+<script>
+  var _la = document.getElementById("meo");
+  _la.addEventListener("mouseover",kabi);
+  _la.addEventListener("mouseout",bija);
+
+  function kabi(){
+    document.getElementById("meo").style.color = "#db62ff"
+  }
+
+  function bija(){
+    document.getElementById("meo").style.color = "#000000"
+  }
+</script>
+
+
+
+<script>
+</script>
+
+</body>
+</html>
