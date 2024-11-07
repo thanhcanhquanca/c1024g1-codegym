@@ -5,65 +5,23 @@
     <title>Khai báo và sử dụng biến </title>
 </head>
 <body>
+<p> Tính diện tích hình chữ nhật</p>
 
-    <p>Ứng dụng máy tính đơn giản</p>
+    <label>Chiều rộng <input type="number" placeholder="nhap dl1" id="with"></label>
+    <label>Chiều cao <input type="number" placeholder="nhap dl2" id="height"></label>
+    <button onclick="kich()">Tính diện tích hcn</button>
 
-    <form id="form">
-        <input type="number" placeholder="nhập dữ liệu 1" id="dl1">
-        <input type="number" placeholder="nhập dữ liệu 2" id="dl2">
-        <button type="button" onclick="xlCong()">Cộng</button>
-        <button type="button" onclick="xlTru()">Trừ</button>
-        <button type="button" onclick="xlChia()">Chia</button>
-        <button type="button" onclick="xlNhan()">Nhân</button>
-    </form>
-
-<p>Result:</p>
-
-    <p id="htkp"></p>
+<p id="tdtcn"></p>
 
 
 <script>
+        function kich(){
+            const _d1 = parseFloat(document.getElementById("with").value);
+            const _d2 = parseFloat(document.getElementById("height").value);
 
-        function xlCong() {
-            const dl1 = parseFloat(document.getElementById('dl1').value);
-            const dl2 = parseFloat(document.getElementById('dl2').value);
-
-            const result = dl1 + dl2;
-            document.getElementById("htkp").innerText = "kết quả "+result;
-
+            const dthvn = _d1*_d2;
+            document.getElementById("tdtcn").innerText = "kết quả là :" + dthvn;
         }
-
-
-        function xlTru() {
-            const dl1 = parseFloat(document.getElementById('dl1').value);
-            const dl2 = parseFloat(document.getElementById('dl2').value);
-            const result = dl1 - dl2;
-            document.getElementById("htkp").innerText = "kết quả "+result;
-        }
-
-        function xlChia() {
-            const dl1 = parseFloat(document.getElementById('dl1').value);
-            const dl2 = parseFloat(document.getElementById('dl2').value);
-            if (dl2 !== 0) {
-                const result = dl1 / dl2;
-                document.getElementById("htkp").innerText = "kết quả "+result;
-            } else {
-                document.getElementById("htkp").innerText = "không thể chia hết cho 0"
-            }
-        }
-
-        function xlNhan(){
-            const dl1 = parseFloat(document.getElementById('dl1').value);
-            const dl2 = parseFloat(document.getElementById('dl2').value);
-
-            const result = dl1*dl2;
-            document.getElementById("htkp").innerText = "kết quả :" + result;
-
-
-        }
-
-
-
 </script>
 
 </body>
