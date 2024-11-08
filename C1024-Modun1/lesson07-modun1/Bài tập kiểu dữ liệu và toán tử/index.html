@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập Biến, kiểu dữ liệu và toán tử</title>
+</head>
+<body>
+
+
+<p>Nhập điểm cho từng môn học:</p>
+<input type="number" placeholder="Nhập điểm Vật Lý" id="vl"> Vật Lý<br><br>
+<input type="number" placeholder="Nhập điểm Toán" id="tn"> Toán<br><br>
+<input type="number" placeholder="Nhập điểm Anh" id="an"> Anh<br><br>
+
+<button onclick="diemtrungbinh()">Điểm Trung bình 3 môn</button>
+<p id="result1"></p>
+
+<hr>
+
+<h2>Chuyển đổi nhiệt độ</h2>
+<input type="number" placeholder="Nhập độ C" id="celsius"> Độ C<br><br>
+<button onclick="chuyendoidoC()">Chuyển đổi độ C</button>
+<p id="result2"></p>
+
+
+<hr>
+
+<h2>Tính diện tích và chu vi hình tròn</h2>
+<input type="number" placeholder="Nhập bán kính hình tròn" id="radius"> Bán kính<br><br>
+
+<button onclick="dientichhinhtron()">Tính diện tích hình tròn</button>
+<p id="result3"></p>
+
+<button onclick="chuvihinhtron()"> Tính chu vi hình tròn</button>
+<p id="result4"></p>
+
+<script>
+    function diemtrungbinh(){
+        var vl = parseFloat(document.getElementById("vl").value);
+        var tn = parseFloat(document.getElementById("tn").value);
+        var an = parseFloat(document.getElementById("an").value);
+
+        var tong = vl +tn +an;
+        var trungbinh = tong /3
+        document.getElementById("result1").innerText = "Tổng điểm trung bình"+ trungbinh
+    }
+
+    function chuyendoidoC(){
+        var celsius = parseFloat(document.getElementById("celsius").value);
+        var fahrenheit = (celsius * 9 / 5) +32 ;
+        document.getElementById("result2").innerText = "kết quả :"+ fahrenheit + "°C"
+    }
+
+    function dientichhinhtron(){
+        var radius = parseFloat(document.getElementById("radius").value);
+        var dienTich = Math.PI * Math.pow(radius, 2);
+        document.getElementById("result3").innerText = "kết quả "+dienTich ;
+
+    }
+
+    function chuvihinhtron() {
+        var radius = parseFloat(document.getElementById("radius").value);
+        var chuVi = 2 * Math.PI * radius;
+        document.getElementById("result4").innerText = "kết quả :"+chuVi;
+    }
+</script>
+
+</body>
+</html>
