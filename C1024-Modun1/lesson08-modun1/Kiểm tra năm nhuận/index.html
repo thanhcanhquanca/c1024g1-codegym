@@ -9,27 +9,27 @@
 
 
 <script>
-  let year = parseInt(prompt("Enter a year"));
-  let isleapYear = false;
-
-  let isDiisibleBy4 = year % 4 == 0;
-  if (isDiisibleBy4){
-      let isDivisibleBy100 = year %100 == 0;
-    if (isDivisibleBy100){
-      let isDivisibleBy400 = year %400 ==0;
-      if(isDivisibleBy400){
-        isleapYear = true;
-      }
-    }else {
-        isleapYear = true;
-    }
-  }
-
-  if (isleapYear){
-    alert(year + " is a leap year");
-  }else {
-    alert(year + "not is a leap year")
-  }
+  // let year = parseInt(prompt("Enter a year"));
+  // let isleapYear = false;
+  //
+  // let isDiisibleBy4 = year % 4 == 0;
+  // if (isDiisibleBy4){
+  //     let isDivisibleBy100 = year %100 == 0;
+  //   if (isDivisibleBy100){
+  //     let isDivisibleBy400 = year %400 ==0;
+  //     if(isDivisibleBy400){
+  //       isleapYear = true;
+  //     }
+  //   }else {
+  //       isleapYear = true;
+  //   }
+  // }
+  //
+  // if (isleapYear){
+  //   alert(year + " is a leap year");
+  // }else {
+  //   alert(year + "not is a leap year")
+  // }
 
 
 //  kiểm tra giá trị
@@ -39,6 +39,27 @@
 //   } else {
 //     alert("You don't know? nalu!");
 //   }
+
+
+  let usernam = prompt("nhập tên");
+
+  if (usernam === "LyCode"){
+    let pass = prompt("nhập pass");
+    if (pass === "ly123"){
+      alert("chúc mừng ban đăng nhập thành công")
+    }else if (pass == null){
+      alert("Chưa có gì cả");
+
+    }else {
+      alert("mật khẩu không đúng")
+    }
+  }
+
+  if (usernam === null){
+    alert("nhập dữ liệu")
+  }else {
+    alert("chúng ta không quen ai đi đường nấy")
+  }
 
 
 </script>
