@@ -1,10 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Sự kiện bàn phím</title>
 </head>
-<body>
-$END$
+<body onload="docReady()">
+<img id="nobita_0" src="https://upload.wikimedia.org/wikipedia/vi/2/2c/Nobita.png"
+                    style="position: absolute ; left: 0 ; top: 0;" height="100px" width="70px">
+
+<script>
+   function upArrowPressed(){
+       let _nobita = document.getElementById("nobita_0");
+       _nobita.style.top = (parseInt(_nobita.style.top) || 0) + 5 + 'px';
+   }
+
+   function bottomArrowPressed(){
+       let _nobita = document.getElementById("nobita_0");
+       _nobita.style.top = (parseInt(_nobita.style.top) || 0) - 5 + 'px';
+
+   }
+
+   function leftArrowPressed(){
+       let _nobita = document.getElementById("nobita_0");
+       _nobita.style.left = (parseInt(_nobita.style.left) || 0) - 5 + 'px';
+   }
+
+   function rightArrowPrressed(){
+       let _nobita = document.getElementById("nobita_0");
+       _nobita.style.left = (parseInt(_nobita.style.left) || 0) + 5 + 'px';
+   }
+
+
+   function moveSelection(evt){
+       switch (evt.keyCode){
+           case 37 :
+               leftArrowPressed();
+               break;
+           case 38 :
+               upArrowPressed();
+               break;
+           case 39 :
+               rightArrowPrressed();
+               break;
+           case 40 :
+               bottomArrowPressed();
+               break;
+       }
+   }
+
+   function docReady(){
+       window.addEventListener('keydown' ,moveSelection );
+   }
+
+</script>
 </body>
+
 </html>
