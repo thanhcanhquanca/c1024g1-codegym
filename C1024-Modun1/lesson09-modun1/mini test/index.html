@@ -63,25 +63,15 @@
   let b = parseFloat(prompt("Nhập cạnh b"));
   let c = parseFloat(prompt("Nhập cạnh c"));
 
-  if (a+b > c){
+  if (a + b > c && a + c > b && b + c > a) {
     ketqua = "đây là một hình tam giác"
   }else {
-    ketqua = "đây không phải là 1 hình tam giác"
+    ketqua =  "đây không phải là 1 hình tam giác"
   }
-
-  if (a+c > b){
-    ketqua = "đây là 1 hình tam giác"
-  }else {
-    ketqua = "đây không phải là 1 hình tam giác"
-  }
-
-  if(b+c > a){
-    ketqua = "đây là 1 hình tam giác"
-  }else {
-    ketqua = "đây không phải một hình tam giác"
-  }
-
   alert(ketqua);
+
+
+
 
 
 
