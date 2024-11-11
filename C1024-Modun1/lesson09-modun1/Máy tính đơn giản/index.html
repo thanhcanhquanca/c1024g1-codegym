@@ -1,10 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        #nhapvaoso {
+            width: 200px;
+            height: 30px;
+            text-align: right;
+            margin-bottom: 10px;
+        }
+        button {
+            width: 40px;
+            height: 40px;
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
-$END$
+
+<input type="text" id="nhapvaoso" readonly><br><br>
+
+<button onclick="nh_number('1')">1</button>
+<button onclick="nh_number('2')">2</button>
+<button onclick="nh_number('3')">3</button>
+<button onclick="pheptinh('+')">+</button><br><br>
+
+<button onclick="nh_number('4')">4</button>
+<button onclick="nh_number('5')">5</button>
+<button onclick="nh_number('6')">6</button>
+<button onclick="pheptinh('-')">-</button><br><br>
+
+<button onclick="nh_number('7')">7</button>
+<button onclick="nh_number('8')">8</button>
+<button onclick="nh_number('9')">9</button>
+<button onclick="pheptinh('*')">*</button><br><br>
+
+<button onclick="xoanhapvao()">AC</button>
+<button onclick="nh_number('0')">0</button>
+<button onclick="tinhtoan()">=</button>
+<button onclick="pheptinh('/')">/</button><br><br>
+
+<script>
+    const _nhapvaoso = document.getElementById("nhapvaoso");
+
+    function nh_number(number){
+        _nhapvaoso.value += number;
+    }
+
+    function pheptinh(nguoinhap){
+        const _kytucuoi = _nhapvaoso.value.slice(-1);
+        if ("+-*/".includes(_kytucuoi)){
+            return;
+        }
+        _nhapvaoso.value += nguoinhap;
+    }
+
+    function tinhtoan(){
+        try {
+           _nhapvaoso.value = eval(_nhapvaoso.value);
+        }catch (e){
+            _nhapvaoso.value = "loi";
+        }
+    }
+
+    function xoanhapvao(){
+        _nhapvaoso.value = "";
+    }
+
+
+
+</script>
+
+
 </body>
 </html>
