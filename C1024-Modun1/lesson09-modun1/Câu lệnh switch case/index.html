@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Câu lệnh switch-case</title>
+</head>
+<body>
+<h3>Kiem tra so ngay trong thang</h3>
+
+<label for="nhapthang"></label>
+<input type="number" id="nhapthang" placeholder="nhap thang">
+<button type="button" onclick="clickCheck()">Check</button><br><br>
+<p id="htkq"></p>
+
+<script>
+  function clickCheck(){
+    let _nhapthang = document.getElementById("nhapthang").value;
+
+    switch (_nhapthang){
+      case "1":
+        document.getElementById("htkq").innerText = "thang 1 co 31 ngay";
+            break;
+      case "2":
+        document.getElementById("htkq").innerText = "thang 2 co 28 or 29 ngay";
+            break;
+      case "3":
+        document.getElementById("htkq").innerText = "thang 3 co 31 ngay";
+            break;
+      case "4":
+        document.getElementById("htkq").innerText = "thang 4 co 30 ngay";
+            break;
+      case "5":
+        document.getElementById("htkq").innerText = "thang 5 co 31 ngay";
+            break;
+      case "6":
+        document.getElementById("htkq").innerText = "thang 6 co 30 ngay";
+            break;
+      case "7":
+        document.getElementById("htkq").innerText = "thang 7 co 31 ngay";
+            break;
+      case "8":
+        document.getElementById("htkq").innerText = "thang 8 co 30 ngay";
+            break;
+      case "9":
+        document.getElementById("htkq").innerText = "thang 9 co 31 ngay";
+            break;
+      case "10":
+        document.getElementById("htkq").innerText = "thang 10 co 30 ngay";
+            break;
+      case "11":
+        document.getElementById("htkq").innerText = "thang 11 co 31 ngay";
+            break;
+      case "12":
+        document.getElementById("htkq").innerText = "thang 12 co 30 ngay";
+            break;
+      default:
+        document.getElementById("htkq").innerText = "khong co thang nay vui long nhap lai";
+
+    }
+  }
+
+
+</script>
+</body>
+</html>
