@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Test</title>
+</head>
+<body>
+
+</body>
+<script>
+
+  // bài tập 1 :
+  // so_kwh = 50,50,100,100,100,0
+  // tien_dien = 1893,1956,2271,2860,3197,3302
+
+  let so_kwh = (parseFloat(prompt("nhập vào sản lượng số kwh ")));
+
+  if (so_kwh <= 50){
+    tien_dien = so_kwh * 1893;
+  }else if (so_kwh <= 100){
+    tien_dien = (50 * 1893) + ((so_kwh - 50) * 1956);
+  }else if (so_kwh <= 200){
+    tien_dien = (50 * 1893) + (50 * 1956) + ((so_kwh - 100) * 2271);
+  }else if (so_kwh <= 300){
+    tien_dien = (50 * 1893) + (50 * 1956) + (100 * 2271) + ((so_kwh - 200) * 2860);
+  }else if (so_kwh <= 400){
+    tien_dien = (50 * 1893) + (50 * 1956) + (100 * 2271) + (100 * 2860) + ((so_kwh - 300) * 3197);
+  }else {
+    tien_dien = (50 * 1893) + (50 * 1956) + (100 * 2271) + (100 * 2860) + (100 * 3197) + ((so_kwh - 400) * 3302)
+  }
+  alert(tien_dien)
+
+
+  // bài tập 2 :
+  // Nhập vào a là năm, in ra kết luận a có phải năm nhuận không?
+
+  let a1 = (parseInt(prompt("nhập vào 1 năm")));
+  let laNamNhuan = false;
+
+  let chiahetCho4 = a1 % 4 == 0;
+  if (chiahetCho4){
+    let chiahetCho100 = a1 % 100 == 0;
+    if(chiahetCho100){
+      let chiahetcho400 = a1 % 400 == 0;
+      if (chiahetcho400){
+        laNamNhuan = true;
+      }
+    }else {
+       laNamNhuan = true;
+    }
+  }
+  if (laNamNhuan){
+    alert(a1 + "là 1 năm nhuận")
+  }else {
+    alert(a1 + "không phải là 1 năm nhuận")
+  }
+
+ // Bài 3
+ //  Nhập vào a, b, c, kiểm tra xem a, b, c có phải là 3 cạnh của:
+
+  //  1 tam giác?
+  let a = parseFloat(prompt("Nhập cạnh a"));
+  let b = parseFloat(prompt("Nhập cạnh b"));
+  let c = parseFloat(prompt("Nhập cạnh c"));
+
+  if (a+b > c){
+    ketqua = "đây là một hình tam giác"
+  }else {
+    ketqua = "đây không phải là 1 hình tam giác"
+  }
+
+  if (a+c > b){
+    ketqua = "đây là 1 hình tam giác"
+  }else {
+    ketqua = "đây không phải là 1 hình tam giác"
+  }
+
+  if(b+c > a){
+    ketqua = "đây là 1 hình tam giác"
+  }else {
+    ketqua = "đây không phải một hình tam giác"
+  }
+
+  alert(ketqua);
+
+
+
+
+ //  1 tam giác cân?
+  let a = parseFloat(prompt("Nhập cạnh a"));
+  let b = parseFloat(prompt("Nhập cạnh b"));
+  let c = parseFloat(prompt("Nhập cạnh c"));
+
+  if (a==b || b==c || a==c){
+    ketqua = "đây là tam giác cân"
+  }else {
+    ketqua = "đây không phải là tam giác cân."
+  }
+
+  alert(ketqua);
+
+ //  1 tam giác đều?
+
+  let a = parseFloat(prompt("Nhập cạnh a"));
+  let b = parseFloat(prompt("Nhập cạnh b"));
+  let c = parseFloat(prompt("Nhập cạnh c"));
+
+  if (a + b > c && a + c > b && b + c > a) {
+    if (a === b && b === c) {
+      alert("Đây là tam giác đều");
+    } else {
+      alert("Đây không phải là tam giác đều");
+    }
+  } else {
+    alert("Ba cạnh không tạo thành tam giác");
+  }
+
+
+
+ //  1 tam giác vuông?
+
+
+  let a = parseFloat(prompt("Nhập cạnh a"));
+  let b = parseFloat(prompt("Nhập cạnh b"));
+  let c = parseFloat(prompt("Nhập cạnh c"));
+
+  if (a + b > c && a + c > b && b + c > a){
+    if (a * a === b * b + c * c || b * b === a * a + c * c || c * c === a * a + b * b){
+      alert("đây là một tam giác vuông")
+    }else {
+      alert("đây không phải tam giác vuông  ")
+    }
+  }else {
+    alert("đây không phải là tam giác ")
+  }
+
+
+
+
+</script>
+</html>
