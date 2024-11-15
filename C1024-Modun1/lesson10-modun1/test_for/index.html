@@ -1,10 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+
+<input type="button" onclick="myFunction()"> Click vào
+
+<script>
+  var i = 5;
+  var count = 0;
+  for (var i = 0; i < 10; i+=2) {  // i = i + 2
+    count += i;  // count = count + i;
+    // i = 0 => 0 + 0 = 0
+                 // i = 2 => 0 + 2 = 2
+                 // i = 4 => 2 + 4 = 6
+                 // i = 6 => 6 + 6 = 12
+                // i = 8 => 12 + 8 = 20
+                // i = 10 => break
+  }
+  alert(count);
+
+
+
+
+  // var pernd = {name:"hà nội" , labi:"huế", satic:"đà nẵng"}
+  //
+  // for (var p in pernd){
+  //     console.log(pernd[p]);
+  // }
+
+  function myFunction() {
+
+      var sum = 0;
+
+      var i = 0;
+
+      do {
+
+
+          sum += i;  // i = 0 => sum += i  <=> sum = sum + i  = 0 + 0 = 0
+                     // i = 1 => sum += i = 0 + 1 = 1
+                    // i = 2 => sum += i = 1 + 2 = 3
+                    // i = 3 => sum += i =3 + 3 = 6
+                    // i = 4 => sum +=i = 6 + 4 = 10
+                    // i = 5 => sum += i = 10 + 5 = 15
+                    // i = 6 => break
+
+          i++;
+          console.log(sum)
+      }
+
+      while (i <= 5);
+
+      document.getElementById("demo").innerHTML = sum;
+
+  }
+
+
+</script>
 </body>
 </html>
